@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') or exit('No se permite el acceso directo al script');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class Ujian extends CI_Controller
 {
@@ -26,14 +26,14 @@ class Ujian extends CI_Controller
 	public function akses_dosen()
 	{
 		if (!$this->ion_auth->in_group('Lecturer')) {
-			show_error('Esta página es específicamente para profesores para hacer una prueba en línea, <a href="' . base_url('dashboard') . '">Volver al menú principal</a>', 403, 'Acceso Prohibido');
+			show_error('This page is specifically for lecturers to make an Online Test, <a href="' . base_url('dashboard') . '">Back to main menu</a>', 403, 'Forbidden Access');
 		}
 	}
 
 	public function akses_mahasiswa()
 	{
-		if (!$this->ion_auth->in_group('Estudiante')) {
-			show_error('Esta página es específicamente para estudiantes que toman el examen., <a href="' . base_url('dashboard') . '">Volver al Menú</a>', 403, 'Acceso Prohibido');
+		if (!$this->ion_auth->in_group('Student')) {
+			show_error('This page is specifically for students taking the exam, <a href="' . base_url('dashboard') . '">Back to main menu</a>', 403, 'Forbidden Access');
 		}
 	}
 
@@ -56,8 +56,8 @@ class Ujian extends CI_Controller
 		$user = $this->ion_auth->user()->row();
 		$data = [
 			'user' => $user,
-			'judul'	=> 'Examen',
-			'subjudul' => 'Datos de Examen',
+			'judul'	=> 'Exam',
+			'subjudul' => 'Exam Data',
 			'dosen' => $this->ujian->getIdDosen($user->username),
 		];
 		$this->load->view('_templates/dashboard/_header.php', $data);
@@ -73,8 +73,8 @@ class Ujian extends CI_Controller
 
 		$data = [
 			'user' 		=> $user,
-			'judul'		=> 'Examen',
-			'subjudul'	=> 'Agregar Examen',
+			'judul'		=> 'Exam',
+			'subjudul'	=> 'Add Exam',
 			'matkul'	=> $this->soal->getMatkulDosen($user->username),
 			'dosen'		=> $this->ujian->getIdDosen($user->username),
 		];
@@ -92,8 +92,8 @@ class Ujian extends CI_Controller
 
 		$data = [
 			'user' 		=> $user,
-			'judul'		=> 'Examen',
-			'subjudul'	=> 'Editar Examen',
+			'judul'		=> 'Exam',
+			'subjudul'	=> 'Edit Exam',
 			'matkul'	=> $this->soal->getMatkulDosen($user->username),
 			'dosen'		=> $this->ujian->getIdDosen($user->username),
 			'ujian'		=> $this->ujian->getUjianById($id),
@@ -119,12 +119,12 @@ class Ujian extends CI_Controller
 		$jml 	= $this->ujian->getJumlahSoal($dosen->id_dosen)->jml_soal;
 		$jml_a 	= $jml + 1; // If you don't understand, please read the user_guide codeigniter about form_validation in the less_than section
 
-		$this->form_validation->set_rules('nama_ujian', 'Nombre de Examen', 'required|alpha_numeric_spaces|max_length[50]');
+		$this->form_validation->set_rules('nama_ujian', 'Exam Name', 'required|alpha_numeric_spaces|max_length[50]');
 		$this->form_validation->set_rules('jumlah_soal', 'Number of Questions', "required|integer|less_than[{$jml_a}]|greater_than[0]", ['less_than' => "Soal tidak cukup, anda hanya punya {$jml} soal"]);
-		$this->form_validation->set_rules('tgl_mulai', 'Fecha de Inicio', 'required');
-		$this->form_validation->set_rules('tgl_selesai', 'Fecha de Fin', 'required');
-		$this->form_validation->set_rules('waktu', 'Hora', 'required|integer|max_length[4]|greater_than[0]');
-		$this->form_validation->set_rules('jenis', 'Pregunta Aleatoria', 'required|in_list[Random,Sort]');
+		$this->form_validation->set_rules('tgl_mulai', 'Start Date', 'required');
+		$this->form_validation->set_rules('tgl_selesai', 'Completion Date', 'required');
+		$this->form_validation->set_rules('waktu', 'Time', 'required|integer|max_length[4]|greater_than[0]');
+		$this->form_validation->set_rules('jenis', 'Random Question', 'required|in_list[Random,Sort]');
 	}
 
 	public function save()
