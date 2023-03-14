@@ -24,10 +24,10 @@
 			$relasi = ["kelasdosen", "jurusanmatkul"];
 			$users = ["users"];
 			?>
-			<li class="<?= $page === 'dashboard' ? "active" : "" ?>"><a href="<?= base_url('dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+			<li class="<?= $page === 'dashboard' ? "active" : "" ?>"><a href="<?= base_url('dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Inicio</span></a></li>
 			<?php if ($this->ion_auth->is_admin()) : ?>
 				<li class="treeview <?= in_array($page, $master)  ? "active menu-open" : ""  ?>">
-					<a href="#"><i class="fa fa-folder-open"></i> <span>Datos Principales</span>
+					<a href="#"><i class="fa fa-folder-open"></i> <span>Información General</span>
 						<span class="pull-right-container">
 							<i class="fa fa-angle-left pull-right"></i>
 						</span>
@@ -36,7 +36,7 @@
 						<li class="<?= $page === 'jurusan' ? "active" : "" ?>">
 							<a href="<?= base_url('jurusan') ?>">
 								<i class="fa fa-bars"></i>
-								Departmento
+								Área
 							</a>
 						</li>
 						<li class="<?= $page === 'kelas' ? "active" : "" ?>">
@@ -81,7 +81,7 @@
 						<li class="<?= $page === 'jurusanmatkul' ? "active" : "" ?>">
 							<a href="<?= base_url('jurusanmatkul') ?>">
 								<i class="fa fa-bars"></i>
-								Departmento - Curso
+								Área - Curso
 							</a>
 						</li>
 					</ul>

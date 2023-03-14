@@ -17,13 +17,21 @@
 		justify-content: center;
 		align-items: center;
 	}
+	#image-istg {
+		width: 100px;
+		height: 100px;
+	}
 </style>
 <div class="h-100 w-100 d-flex" id="login-main">
 	<!-- /.login-logo -->
 	<div class="login-box-body col-lg-3 col-md-4 col-sm-10 col-xs-12">
 		<h3 class="text-center mt-0 mb-4">
-			<b>S</b>istema de<b>E</b>xamen en <b>L</b>ínea
+			<b> Sistema De Evaluación Al Docente</b>
+			<div>
+				<img id="image-istg" src="uploads/images/LgISTG.png" alt="Italian Trulli">
+			</div>
 		</h3>
+		
 		<p class="login-box-msg">Ingresa tus credenciales para iniciar sesión</p>
 
 		<div id="infoMessage" class="text-center"><?php echo $message; ?></div>

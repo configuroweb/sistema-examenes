@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>NIM</th>
+                        <th>Cédula</th>
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Clase</th>

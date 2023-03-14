@@ -4,11 +4,7 @@
 			<!-- /.content-wrapper -->
 
 			<!-- Main Footer -->
-			<footer class="main-footer">
-				<!-- To the right -->
-				<!-- Default to the left -->
-				<strong>Para más desarrollos</strong> <a href="https://www.configuroweb.com/46-aplicaciones-gratuitas-en-php-python-y-javascript/#Aplicaciones-gratuitas-en-PHP,-Python-y-Javascript">ConfiguroWeb</a>
-			</footer>
+
 
 			</div>
 

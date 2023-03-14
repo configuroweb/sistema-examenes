@@ -12,8 +12,8 @@
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="form-group">
-                    <label for="nip">NIP</label>
-                    <input value="<?= $data->nip ?>" autofocus="autofocus" onfocus="this.select()" type="number" id="nip" class="form-control" name="nip" placeholder="NIP">
+                    <label for="nip">Cédula</label>
+                    <input value="<?= $data->nip ?>" autofocus="autofocus" onfocus="this.select()" type="number" id="nip" class="form-control" name="nip" placeholder="Cédula">
                     <small class="help-block"></small>
                 </div>
                 <div class="form-group">

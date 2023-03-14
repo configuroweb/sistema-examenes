@@ -11,7 +11,7 @@
 			<div class="col-sm-4">
 				<button type="button" onclick="bulk_delete()" class="btn btn-flat btn-sm bg-red"><i class="fa fa-trash"></i> Eliminación Masiva</button>
 			</div>
-			<div class="form-group col-sm-4 text-center">
+			 <div class="form-group col-sm-4 text-center">
 				<?php if ($this->ion_auth->is_admin()) : ?>
 					<select id="matkul_filter" class="form-control select2" style="width:100% !important">
 						<option value="all">Todos los Cursos</option>
@@ -23,7 +23,7 @@
 				<?php if ($this->ion_auth->in_group('Lecturer')) : ?>
 					<input id="matkul_id" value="<?= $matkul->nama_matkul; ?>" type="text" readonly="readonly" class="form-control">
 				<?php endif; ?>
-			</div>
+			</div> 
 			<div class="col-sm-4">
 				<div class="pull-right">
 					<a href="<?= base_url('soal/add') ?>" class="btn bg-blue btn-flat btn-sm"><i class="fa fa-plus"></i> Crear Preguntas</a>

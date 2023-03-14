@@ -22,7 +22,7 @@
 				<tr>
 					<th>#</th>
 					<th>Clase</th>
-					<th>Departamento</th>
+					<th>Área</th>
 					<th class="text-center">
 						<input type="checkbox" id="select_all">
 					</th>

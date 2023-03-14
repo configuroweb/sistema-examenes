@@ -36,7 +36,7 @@
                         <thead>
                             <tr>
                                 <td>No</td>
-                                <td>NIM</td>
+                                <td>Cédula</td>
                                 <td>Name</td>
                                 <td>Email</td>
                                 <td>Gender</td>
