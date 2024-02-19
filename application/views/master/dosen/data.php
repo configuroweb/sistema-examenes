@@ -20,7 +20,7 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>NIP</th>
+                    <th>Cédula</th>
                     <th>Nombre Profesor</th>
                     <th>Correo</th>
                     <th>Curso</th>

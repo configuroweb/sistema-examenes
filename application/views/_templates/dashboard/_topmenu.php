@@ -1,6 +1,7 @@
 <a href="<?= base_url('dashboard') ?>" class="logo">
     <span class="logo-mini"><b>CW</b></span>
-    <span class="logo-lg"><b>C</b>onfiguro<b>W</b>eb<b></span>
+    <!-- <span class="logo-lg"><b>C</b>onfiguro<b>W</b>eb<b></span> -->
+    <span class="logo-lg"><b>Plataforma</span>
 </a>
 
 <nav class="navbar navbar-static-top" role="navigation">

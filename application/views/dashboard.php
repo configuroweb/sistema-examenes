@@ -32,7 +32,7 @@
                         <td><?= $dosen->nama_dosen ?></td>
                     </tr>
                     <tr>
-                        <th>NIP</th>
+                        <th>Cédula</th>
                         <td><?= $dosen->nip ?></td>
                     </tr>
                     <tr>
@@ -68,7 +68,7 @@
                 </div>
                 <table class="table table-hover">
                     <tr>
-                        <th>NIM</th>
+                        <th>Cédula</th>
                         <td><?= $mahasiswa->nim ?></td>
                     </tr>
                     <tr>

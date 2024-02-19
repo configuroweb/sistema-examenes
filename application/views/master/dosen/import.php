@@ -36,7 +36,7 @@
                         <thead>
                             <tr>
                                 <td>No</td>
-                                <td>NIP</td>
+                                <td>Cédula</td>
                                 <td>Name</td>
                                 <td>Email</td>
                                 <td>Course ID</td>
